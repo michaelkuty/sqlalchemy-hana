@@ -79,7 +79,7 @@ class HANAStatementCompiler(compiler.SQLCompiler):
 class HANATypeCompiler(compiler.GenericTypeCompiler):
 
     def visit_boolean(self, type_):
-        return self.visit_TINYINT(type_)
+        return "BOOLEAN"
 
     def visit_NUMERIC(self, type_):
         return self.visit_DECIMAL(type_)
